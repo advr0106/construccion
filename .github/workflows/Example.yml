@@ -22,13 +22,13 @@ jobs:
         dotnet-version: '6.0.x' 
 
     - name: Restore dependencies
-      run: dotnet restore WebApp/WebApp
+      run: dotnet restore WebApp
 
     - name: Build
-      run: dotnet build WebApp/WebApp --configuration Release
+      run: dotnet build WebApp --configuration Release
 
     - name: Test
-      run: dotnet test WebApp/WebApp --no-build --configuration Release
+      run: dotnet test WebApp --no-build --configuration Release
 
   deploy:
     needs: build
@@ -44,7 +44,7 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore WebApp/WebApp
+      run: dotnet restore WebApp
 
     - name: Publish
       run: dotnet publish --configuration Release --output ./publish

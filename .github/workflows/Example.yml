@@ -25,10 +25,10 @@ jobs:
       run: dotnet restore WebApp
 
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build WebApp --configuration Release
 
     - name: Test
-      run: dotnet test --no-build --configuration Release
+      run: dotnet test Web App --no-build --configuration Release
 
   deploy:
     needs: build

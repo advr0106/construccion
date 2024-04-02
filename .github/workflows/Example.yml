@@ -28,7 +28,7 @@ jobs:
       run: dotnet build WebApp --configuration Release
 
     - name: Test
-      run: dotnet test  --no-build --configuration Release
+      run: dotnet test WebApp --no-build --configuration Release
 
   deploy:
     needs: build
